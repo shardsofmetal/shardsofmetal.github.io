@@ -1,0 +1,35 @@
+=== HueCentral Webapp Notes ===
+
+-- HTML5 Features --
+* LocalStorage
+  - Hue bridge address
+  - Hue bridge username
+* Application Cache
+* Geolocation (for daylight sensor)
+
+-- App Features --
+* Use Hue daylight sensor
+  - Get geolocation from browser
+  - Insert geolocation into Hue bridge
+  - Setup rules based on sensor
+* Create/edit rules for sensors
+* Display "poweruser" information
+* Press "link" button on bridge
+
+
+=== References ===
+* HTML5 LocalStorage
+  - http://www.w3schools.com/html/html5_webstorage.asp
+* HTML5 Application Cache
+  - http://www.w3schools.com/html/html5_app_cache.asp
+  - https://developer.apple.com/library/safari/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/OfflineApplicationCache/OfflineApplicationCache.html
+* HTML5 Geolocation
+  - http://www.w3schools.com/html/html5_geolocation.asp
+* HTML5 Examples
+  - http://www.w3schools.com/html/html_examples.asp
+* Icons
+  - http://www.iconsdb.com/white-icons/
+  - http://glyphish.com/
+* Get Hue bridge IP address
+  - http://www.meethue.com/api/nupnp
+

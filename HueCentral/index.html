@@ -1,0 +1,143 @@
+<!doctype html5>
+<html>
+	<head>
+		<title>HueCentral</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+		<script src="js/functions.js"></script>
+	</head>
+	<body>
+		
+		<!-- Home -->
+		<div id="home" data-role="page" data-nav="Home" data-title="HueCentral" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#lights">Lights</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#schedules">Schedules</a></li>
+					<li><a href="#rules">Rules</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#lights">Lights</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#schedules">Schedules</a></li>
+					<li><a href="#rules">Rules</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#lights">Lights</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#schedules">Schedules</a></li>
+					<li><a href="#rules">Rules</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#lights">Lights</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#schedules">Schedules</a></li>
+					<li><a href="#rules">Rules</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#lights">Lights</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#schedules">Schedules</a></li>
+					<li><a href="#rules">Rules</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#lights">Lights</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#schedules">Schedules</a></li>
+					<li><a href="#rules">Rules</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- Initial Setup -->
+		<div id="initial-setup" data-title="Initial Setup" data-nav="Initial Setup" data-role="page" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>HueCentral needs to be setup.</p>
+			</div>
+		</div>
+		
+		<!-- List of Lights -->
+		<div id="lights" data-role="page" data-nav="Lights" data-title="Lights" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Lights placeholder.</p>
+			</div>
+		</div>
+		
+		<!-- List of Groups -->
+		<div id="groups" data-role="page" data-nav="Groups" data-title="Groups" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Groups placeholder.</p>
+			</div>
+		</div>
+		
+		<!-- Alarms -->
+		<div id="alarms" data-role="page" data-nav="Alarms" data-title="Alarms" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Alarms placeholder.</p>
+			</div>
+		</div>
+		
+		<!-- Sensors -->
+		<div id="sensors" data-role="page" data-nav="Sensors" data-title="Sensors" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Sensors placeholder.</p>
+			</div>
+		</div>
+		
+		<!-- Rules -->
+		<div id="rules" data-role="page" data-nav="Rules" data-title="Rules" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Rules placeholder.</p>
+			</div>
+		</div>
+		
+		<!-- Settings -->
+		<div id="Settings" data-role="page" data-nav="Settings" data-title="Settings" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Settings placeholder.</p>
+			</div>
+		</div>
+		
+		<!-- Navigation Menu -->
+		<div data-role="panel" data-position-fixed="true" id="menu" data-theme="b">
+			<div data-role="header">
+				<h2>Menu</h2>
+				<a href="#" data-rel="close" class="ui-btn-right" data-iconpos="notext" data-icon="delete">Close menu</a>
+			</div>
+			<ul data-role="listview" data-inset="true">
+				<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+				<li><a href="#lights" data-prefetch="true">Lights</a></li>
+				<li><a href="#groups" data-prefetch="true">Groups</a></li>
+				<li><a href="#alarms" data-prefetch="true">Alarms</a></li>
+				<li><a href="#rules" data-prefetch="true">Rules</a></li>
+			</ul>
+		</div>
+		
+		<!-- Header -->
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>HueCentral</h1>
+			<a href="#menu" data-iconpos="notext" data-icon="bars">Menu</a>
+		</div>	
+		
+		<!-- Navigation Bar -->
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar" class="ui-state-persist">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active" data-transition="none">Home</a></li>
+					<li><a href="#lights" data-icon="bullets" data-transition="none">Lights</a></li>
+					<li><a href="#groups" data-icon="grid">Groups</a></li>
+					<li><a href="#alarms" data-icon="clock">Alarms</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>
