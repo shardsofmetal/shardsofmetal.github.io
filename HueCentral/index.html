@@ -15,6 +15,10 @@
 	</head>
 	<body>
 		
+<!-------- HueCentral: A mobile web app to control Philips Hue lights -------->
+		
+<!----------------------------------- Pages ----------------------------------->
+		
 		<!-- Home -->
 		<div id="home" data-role="page" data-nav="Home" data-title="HueCentral" data-theme="b">
 			<div data-role="main" class="ui-content">
@@ -57,13 +61,6 @@
 			</div>
 		</div>
 		
-		<!-- Initial Setup -->
-		<div id="initial-setup" data-title="Initial Setup" data-nav="Initial Setup" data-role="page" data-theme="b">
-			<div data-role="main" class="ui-content">
-				<p>HueCentral needs to be setup.</p>
-			</div>
-		</div>
-		
 		<!-- List of Lights -->
 		<div id="lights" data-role="page" data-nav="Lights" data-title="Lights" data-theme="b">
 			<div data-role="main" class="ui-content">
@@ -100,11 +97,27 @@
 		</div>
 		
 		<!-- Settings -->
-		<div id="Settings" data-role="page" data-nav="Settings" data-title="Settings" data-theme="b">
+		<div id="settings" data-role="page" data-nav="Settings" data-title="Settings" data-theme="b">
 			<div data-role="main" class="ui-content">
 				<p>Settings placeholder.</p>
 			</div>
 		</div>
+		
+		<!-- Initial Setup -->
+		<div id="initial-setup" data-title="Initial Setup" data-nav="Initial Setup" data-role="page" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>HueCentral needs to be setup.</p>
+			</div>
+		</div>
+		
+		<!-- Help -->
+		<div id="help" data-role="page" data-nav="Help" data-title="Help" data-theme="b">
+			<div data-role="main" class="ui-content">
+				<p>Help placeholder.</p>
+			</div>
+		</div>
+
+<!----------------------- External Toolbars and Panels ----------------------->
 		
 		<!-- Navigation Menu -->
 		<div data-role="panel" data-position-fixed="true" id="menu" data-theme="b">
@@ -113,13 +126,15 @@
 				<a href="#" data-rel="close" class="ui-btn-right" data-iconpos="notext" data-icon="delete">Close menu</a>
 			</div>
 			<ul data-role="listview" data-inset="true">
-				<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
 				<li><a href="#lights" data-prefetch="true">Lights</a></li>
 				<li><a href="#groups" data-prefetch="true">Groups</a></li>
 				<li><a href="#alarms" data-prefetch="true">Alarms</a></li>
 				<li><a href="#rules" data-prefetch="true">Rules</a></li>
+				<li><a href="#settings" data-prefetch="true">Settings</a></li>
+				<li><a href="#help" data-prefetch="true">Help</a></li>
 			</ul>
 		</div>
+		
 		
 		<!-- Header -->
 		<div data-role="header" data-position="fixed" data-theme="b">
