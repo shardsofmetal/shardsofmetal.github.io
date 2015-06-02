@@ -36,8 +36,11 @@ $(document).ready(function(){
 	$("[data-role='header'], [data-role='footer']").toolbar();
 	$("[data-role='panel']").panel().enhanceWithin();
 	
-	/* Update the contents of the toolbars when changing pages */
+	
 	$(document).on("pagecontainerchange", function() {
+		
+		/* Update the contents of the toolbars when changing pages */
+		
 		// Get 'data-nav' and 'data-title' attributes
 		var currentNav = $(".ui-page-active").jqmData("nav");
 		var currentTitle = $(".ui-page-active").jqmData("title");
@@ -51,6 +54,85 @@ $(document).ready(function(){
 				$(this).addClass("ui-btn-active");
 			}
 		});
+		
+		/* Perform actions on individual page changes */
+		switch(currentNav) {
+		case "Lights":
+			$("#lights-content").html("");
+			$.getJSON(localStorage.address + "/api/" + localStorage.apiName + "/lights")
+			.done(function(data) {
+				if (typeof(data[0]) === "undefined") {
+					var html = "<ul data-role='listview' data-inset='true' id='lights-list'>";
+					for (var key in data) {
+						html += "<li><a href='#light-" + key + "'>" + data[key].name +
+						"</a><a href='#edit-light-" + key + "'>Edit</a></li>";
+					}
+					html += "</ul>";
+					$("#lights-content").append(html).enhanceWithin();
+				}
+			});
+			break;
+		case "Groups":
+			$("#groups-content").html("");
+			$.getJSON(localStorage.address + "/api/" + localStorage.apiName + "/groups")
+			.done(function(data) {
+				if (typeof(data[0]) === "undefined") {
+					var html = "<ul data-role='listview' data-inset='true'>";
+					for (var key in data) {
+						html += "<li><a href='#group-" + key + "'>" + data[key].name +
+						"</a><a href='#edit-group-" + key + "'>Edit</a></li>";
+					}
+					html += "</ul>";
+					$("#groups-content").append(html).enhanceWithin();
+				}
+			});
+			break;
+		case "Alarms":
+			$("#alarms-content").html("");
+			$.getJSON(localStorage.address + "/api/" + localStorage.apiName + "/schedules")
+			.done(function(data) {
+				if (typeof(data[0]) === "undefined") {
+					var html = "<ul data-role='listview' data-inset='true'>";
+					for (var key in data) {
+						html += "<li><a href='#alarm-" + key + "'>" + data[key].name +
+						"</a><a href='#edit-alarm-" + key + "'>Edit</a></li>";
+					}
+					html += "</ul>";
+					$("#alarms-content").append(html).enhanceWithin();
+				}
+			});
+			break;
+		case "Sensors":
+			$("#sensors-content").html("");
+			$.getJSON(localStorage.address + "/api/" + localStorage.apiName + "/sensors")
+			.done(function(data) {
+				if (typeof(data[0]) === "undefined") {
+					var html = "<ul data-role='listview' data-inset='true'>";
+					for (var key in data) {
+						html += "<li><a href='#sensor-" + key + "'>" + data[key].name +
+						"</a><a href='#edit-sensor-" + key + "'>Edit</a></li>";
+					}
+					html += "</ul>";
+					$("#sensors-content").append(html).enhanceWithin();
+				}
+			});
+			break;
+		case "Rules":
+			$("#rules-content").html("");
+			$.getJSON(localStorage.address + "/api/" + localStorage.apiName + "/rules")
+			.done(function(data) {
+				if (typeof(data[0]) === "undefined") {
+					var html = "<ul data-role='listview' data-inset='true'>";
+					for (var key in data) {
+						html += "<li><a href='#rule-" + key + "'>" + data[key].name +
+						"</a><a href='#edit-rule-" + key + "'>Edit</a></li>";
+					}
+					html += "</ul>";
+					$("#rules-content").append(html).enhanceWithin();
+				}
+			});
+			break;
+		}
 	});
 	
 	/* Perform initial setup */

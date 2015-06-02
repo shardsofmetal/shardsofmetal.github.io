@@ -5,3 +5,13 @@
 .ui-panel-inner>.ui-header {
 	margin: -1em -1em 0 -1em;
 }
+
+.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+    display: block;
+    padding: 0.9em 75px 0.9em 15px;
+}
+div.ui-slider-switch {
+    position: absolute;
+    right: 0;
+    width: 44%;
+}
